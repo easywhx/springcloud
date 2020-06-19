@@ -7,6 +7,7 @@ import java.util.HashMap;
 /**
  * Created by wanhongxu on 2020/3/31.
  */
+
 public class FreshConfigUtil {
     public static void main(String[] args) {
         HashMap<String,String> headers =new HashMap<>();
