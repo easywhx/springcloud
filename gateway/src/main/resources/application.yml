@@ -1,0 +1,22 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+spring:
+  application:
+    name: product-service-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: false
+          lower-case-service-id: true
+      routes:
+        - id: product-view-service-feign
+          uri: lb://PRODUCT-VIEW-SERVICE-FEIGN
+          predicates:
+              - Path=/api-view/**
+          filters:
+              - StripPrefix=1
+server:
+  port: 8041
