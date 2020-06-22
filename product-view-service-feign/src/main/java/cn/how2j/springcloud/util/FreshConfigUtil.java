@@ -12,6 +12,7 @@ public class FreshConfigUtil {
     //启动类
     //在此切换到dev分之
     //dqdqdq
+    //faag
     public static void main(String[] args) {
         HashMap<String,String> headers =new HashMap<>();
         headers.put("Content-Type", "application/json; charset=utf-8");
