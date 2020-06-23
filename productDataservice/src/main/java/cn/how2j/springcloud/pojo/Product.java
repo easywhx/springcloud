@@ -1,33 +1,23 @@
 package cn.how2j.springcloud.pojo;
 
+import lombok.Getter;
+import lombok.Setter;
+import lombok.extern.slf4j.Slf4j;
+import org.junit.jupiter.api.Test;
+
 /**
  * Created by wanhongxu on 2020/3/31.
  */
+@Getter
+@Setter
+@Slf4j
 public class Product {
+
     private int id;
     private String name;
     private int price;
-    public int getId() {
-        return id;
-    }
-    public void setId(int id) {
-        this.id = id;
-    }
-    public String getName() {
-        return name;
-    }
-    public void setName(String name) {
-        this.name = name;
-    }
-    public int getPrice() {
-        return price;
-    }
-    public void setPrice(int price) {
-        this.price = price;
-    }
 
     public Product() {
-
     }
     public Product(int id, String name, int price) {
         super();
@@ -35,5 +25,7 @@ public class Product {
         this.name = name;
         this.price = price;
     }
+
+
 
 }

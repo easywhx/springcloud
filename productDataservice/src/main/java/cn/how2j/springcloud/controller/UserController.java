@@ -2,9 +2,11 @@ package cn.how2j.springcloud.controller;
 
 import cn.how2j.springcloud.pojo.User;
 import cn.how2j.springcloud.service.UserService;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
+import io.swagger.annotations.Api;
 
 import java.util.List;
 
@@ -18,11 +20,13 @@ import java.util.List;
  * @since JDK 1.7
  */
 @RestController
+@Api(value = "用户管理",description = "用户的相关说明",produces = MediaType.APPLICATION_JSON_VALUE)
 public class UserController {
 
     @Autowired
     UserService userService;
 
+    @ApiOperation(value = "/user_save",notes = "保存用户信息")
     @PostMapping("/user_save")
     public void add(@RequestBody User c){
         userService.add(c);
