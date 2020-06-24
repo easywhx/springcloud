@@ -10,6 +10,14 @@ spring:
       enabled: true
       trace:
         enabled: true
+    stream:
+      bindings:
+        demoServiceMQ:
+          group: demo
+          content-type: application/json
+        demoClientMQ:
+          group: demo
+          content-type: application/json
   rabbitmq:
     host: localhost
     port: 5672

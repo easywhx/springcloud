@@ -16,6 +16,15 @@ spring:
         enabled: true
     sampler:
       probability: 1.0
+  cloud:
+    stream:
+      bindings:
+        demoServiceMQ:
+          group: demo
+          content-type: application/json
+        demoClientMQ:
+          group: demo
+          content-type: application/json
 management:
   endpoints:
     web:
